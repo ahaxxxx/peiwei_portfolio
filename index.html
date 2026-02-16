@@ -3,47 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MahamCodes | Portfolio</title>
+  <title data-i18n="meta.title"></title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <p class="tag">MahamCodes</p>
-      <h1 id="full-name">Portfolio</h1>
-      <p id="headline" class="headline"></p>
-      <button id="contact-btn" class="btn">Show Contact</button>
-      <p id="contact-info" class="contact-info hidden"></p>
+  <header class="site-header">
+    <div class="brand" data-i18n="hero.brand"></div>
+    <div class="controls">
+      <button id="lang-toggle" class="control-btn" type="button"></button>
+      <button id="theme-toggle" class="control-btn" type="button"></button>
     </div>
-    <img src="photo.jpg" alt="Profile photo" class="profile-image">
   </header>
 
-  <main>
-    <section>
-      <h2>About</h2>
-      <p id="about-text"></p>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-kicker" data-i18n="hero.kicker"></p>
+        <h1 data-i18n="hero.title"></h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle"></p>
+      </div>
+      <img class="profile-image" src="assets/photo.jpg" alt="">
     </section>
 
-    <section>
-      <h2>Education</h2>
-      <div id="education-list" class="card-grid"></div>
+    <section class="panel">
+      <h2 data-i18n="personal.title"></h2>
+      <div id="personal-grid" class="card-grid"></div>
     </section>
 
-    <section>
-      <h2>Experience</h2>
-      <div id="experience-list" class="card-grid"></div>
+    <section class="panel">
+      <h2 data-i18n="about.title"></h2>
+      <p data-i18n="about.summary"></p>
     </section>
 
-    <section>
-      <h2>Featured Projects</h2>
-      <div id="projects-list" class="card-grid"></div>
+    <section class="panel">
+      <h2 data-i18n="experience.title"></h2>
+      <div id="experience-list" class="stack-list"></div>
+    </section>
+
+    <section class="panel">
+      <h2 data-i18n="education.title"></h2>
+      <div id="education-list" class="stack-list"></div>
+    </section>
+
+    <section class="panel">
+      <h2 data-i18n="activities.title"></h2>
+      <div id="activities-list" class="stack-list"></div>
+    </section>
+
+    <section class="panel">
+      <h2 data-i18n="awards.title"></h2>
+      <ul id="awards-list" class="awards-list"></ul>
+    </section>
+
+    <section class="panel">
+      <h2 data-i18n="contact.title"></h2>
+      <div id="contact-list" class="contact-list"></div>
     </section>
   </main>
 
-  <footer>
-    <p>Built with HTML, CSS, and JavaScript.</p>
+  <footer class="site-footer">
+    <p data-i18n="footer.note"></p>
   </footer>
 
+  <script src="language.js"></script>
+  <script src="theme.js"></script>
+  <script src="contact.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
